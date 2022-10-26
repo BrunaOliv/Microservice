@@ -1,4 +1,10 @@
+using Catalog.API.Data;
+using Catalog.API.Entities.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICatalogContext, CatalogContext>();
 
 // Add services to the container.
 
